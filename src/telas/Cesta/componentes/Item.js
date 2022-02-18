@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Image, StyleSheet, FlatList } from 'react-native';
+import { View, Image, StyleSheet, Linking } from 'react-native';
 
 import Texto from '../../../componentes/Texto';
 
-export default function Item({ item: { nome, imagem } }) {
+export default function Item({ item: { nome, imagem, links } }) {
   return <View style={estilos.item}>
-    <Image source={imagem} style={estilos.imagem}/>
-    <Texto style={estilos.nome}>{ nome }</Texto>
-  </View>
+    <Image source={imagem} style={estilos.imagem} />
+    <Texto style={estilos.nome}>{nome}</Texto>
+
+
+
+  </View >
 }
+
+
 
 const estilos = StyleSheet.create({
   item: {
@@ -29,4 +34,5 @@ const estilos = StyleSheet.create({
     marginLeft: 11,
     color: "#464646"
   },
+
 });

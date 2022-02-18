@@ -6,43 +6,75 @@ import deadpool from '../../assets/frutas/Deadpool.jpg';
 import goku from '../../assets/frutas/Goku.jpg';
 import rick from '../../assets/frutas/Rick.jpg';
 
+
 const cesta = {
   topo: {
-    titulo: "DEPPI",
+    titulo: "©DEPPI",
   },
   detalhes: {
-    nome: "Cesta de Verduras",
+    nome: "Documentos importantes",
     logoFazenda: logo,
     nomeFazenda: "IFCE - Campus Maracanaú",
     descricao: "Com grande poderes vem grandes responsabilidades.",
     preco: "Estágios",
-    botao: "Comprar",
+    botao: "Testar",
   },
   itens: {
-    titulo: "Estágiario ler antes deve,jovem padwan",
+    titulo: " Ler antes deve jovem padwan",
     lista: [
       {
-        nome: "Cogumelo",
+        nome: "Matrícula",
+
         imagem: cogumelo,
       },
       {
-        nome: "Darthvander",
+        nome: "Relatórios",
         imagem: darthvander,
+
       },
       {
-        nome: "Deadpool",
+        nome: "Avaliação Tecnicos",
         imagem: deadpool,
       },
       {
-        nome: "Goku",
+        nome: "Avaliação Superior",
         imagem: goku,
       },
       {
-        nome: "Rick",
+        nome: "Contatos",
         imagem: rick,
       }
     ]
-  }
+  },
+  links: {
+
+    titulo: " Ler antes deve jovem padwan",
+
+    lista: [
+
+      {
+        link01: "Ficha de matrícula"
+      },
+
+      {
+        link02: "Relatório diário do estágio"
+      },
+
+      {
+        link03: "Ficha de avaliação do estagiário"
+      },
+
+      {
+        link04: "Ficha de avaliação do estagiário"
+      },
+      {
+        link04: "Contato"
+      },
+
+    ]
+
+
+  },
 }
 
 export default cesta;

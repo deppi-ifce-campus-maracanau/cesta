@@ -1,21 +1,25 @@
 import React from 'react';
-import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, View, TouchableOpacity, Linking } from 'react-native';
 
 import Texto from '../../../componentes/Texto';
 
 export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) {
   return <>
-    <Texto style={estilos.nome}>{ nome }</Texto>
+    <Texto style={estilos.nome}>{nome}</Texto>
     <View style={estilos.fazenda}>
       <Image source={logoFazenda} style={estilos.imagemFazenda} />
-      <Texto style={estilos.nomeFazenda}>{ nomeFazenda }</Texto>
+      <Texto style={estilos.nomeFazenda}>{nomeFazenda}</Texto>
     </View>
-    <Texto style={estilos.descricao}>{ descricao }</Texto>
-    <Texto style={estilos.preco}>{ preco }</Texto>
+    <Texto style={estilos.descricao}>{descricao}</Texto>
+    <Texto style={estilos.preco}>{preco}</Texto>
 
-    <TouchableOpacity style={estilos.botao} onPress={() => {}}>
-      <Texto style={estilos.textoBotao}>{ botao }</Texto>
+    <TouchableOpacity style={estilos.botao} onPress={() => { }}>
+      <Texto style={estilos.textoBotao}>{botao}</Texto>
     </TouchableOpacity>
+
+    <Texto style={estilos.links} onPress={() => Linking.openURL('https://google.com')} >Click Here To Open Google.</Texto>
+
+
   </>
 }
 
@@ -53,7 +57,7 @@ const estilos = StyleSheet.create({
   },
   botao: {
     flex: 1,
-    width: "10%",
+    width: "50%",
     marginTop: 16,
     backgroundColor: "#2A9F85",
     paddingVertical: 16,
@@ -61,7 +65,7 @@ const estilos = StyleSheet.create({
     alignItems: "center",
     justifyContent: 'center',
 
-    
+
   },
   textoBotao: {
     textAlign: "center",
@@ -70,5 +74,8 @@ const estilos = StyleSheet.create({
     lineHeight: 26,
     fontWeight: "bold",
     alignItems: "center",
+  },
+  links: {
+    color: 'blue',
   },
 })
